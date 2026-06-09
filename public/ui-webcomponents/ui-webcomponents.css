@@ -278,6 +278,9 @@
   .text-brand-dark {
     color: #354159;
   }
+  .text-slate-gray {
+    color: #7E8BA7;
+  }
   .text-white {
     color: var(--color-white);
   }

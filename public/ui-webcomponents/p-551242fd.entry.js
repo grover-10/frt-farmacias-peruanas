@@ -1,0 +1,1 @@
+import{r as c,h as s,H as d}from"./p-gYJl8Md_.js";const o=class{constructor(s){c(this,s)}render(){return s(d,{key:"233350dbf5550a3098fcc5d989a3465c6fd5de91"},s("slot",{key:"b2a1354d297ce45c97f0ed4378f5710b4b0ac13d"}))}};o.style=":host{display:block}";export{o as ui_accordion_item}

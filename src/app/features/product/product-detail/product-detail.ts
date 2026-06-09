@@ -15,9 +15,11 @@ import { ProductDetailComponent } from '../../../shared/components/product-detai
 })
 export class ProductDetail implements OnInit {
 
+  id = input<string>();
+  
   ngOnInit(): void {
     this.getProducts();
-    this.obtainProductId();
+    this.getProductById(this.id() ?? '');
   }
 
   @ViewChild('carousel')
@@ -59,16 +61,9 @@ export class ProductDetail implements OnInit {
     })
   }
 
-  getProductDetail(id: string) {
-    this.productService.getProductDetail(id).subscribe(response => {
+  getProductById(id: string) {
+    this.productService.getProductById(id).subscribe(response => {
       this.product.set(response);
     })
-  }
-
-  obtainProductId() {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.getProductDetail(id)
-    }
   }
 }

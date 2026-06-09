@@ -1,0 +1,50 @@
+[
+    {
+        "id": "prod-101",
+        "name": "Vick Vaporub Ungüento tópico",
+        "price": 2.98,
+        "image": "assets/images/product-1.jpg"
+    },
+    {
+        "id": "prod-102",
+        "name": "Enterogermina Suspensión Oral",
+        "price": 3.56,
+        "image": "assets/images/product-2.png"
+    },
+    {
+        "id": "prod-103",
+        "name": "Multi-bioticos Pastilla dura con sabor a Mentol y Eucaliptol",
+        "price": 2.79,
+        "image": "assets/images/product-3.png"
+    },
+    {
+        "id": "prod-104",
+        "name": "Neurobion 5000 Tableta Recubierta",
+        "price": 33.65,
+        "image": "assets/images/product-4.png"
+    },
+    {
+        "id": "prod-105",
+        "name": "Pack Vick Vaporub 50g + 06 Sobres Vitapyrena Forte",
+        "price": 23.40,
+        "image": "assets/images/product-5.png"
+    },
+    {
+        "id": "prod-106",
+        "name": "Nastizol junior NF Antigripal Comprimidos masticables",
+        "price": 6.00,
+        "image": "assets/images/product-6.png"
+    },
+    {
+        "id": "prod-107",
+        "name": "Vitapyrena Forte Antigripal Sabor Miel y Limón - Caja 50 UN",
+        "price": 2.10,
+        "image": "assets/images/product-7.png"
+    },
+    {
+        "id": "prod-108",
+        "name": "Sal De Andrews Clasica Polvo Efervescente Para Solucion Oral",
+        "price": 1.00,
+        "image": "assets/images/product-8.png"
+    }
+]

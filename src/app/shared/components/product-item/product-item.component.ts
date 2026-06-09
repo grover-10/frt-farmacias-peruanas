@@ -38,7 +38,10 @@ export class ProductItemComponent {
   }
 
   goDetail() {
-    this.router.navigate(['product/product-detail', this.product.id]);
+    this.router.navigate(['product/product-detail'], {
+      queryParams: { id: this.product.id }
+    }
+    );
   }
 
   showInfo() {

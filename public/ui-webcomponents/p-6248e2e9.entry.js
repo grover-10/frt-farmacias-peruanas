@@ -1,0 +1,1 @@
+import{r as e,h as s,H as r}from"./p-gYJl8Md_.js";const a=class{constructor(s){e(this,s)}render(){return s(r,{key:"73132f2053525d0e8d4f18bd736eb90c03aefa3d"},s("slot",{key:"6b54eb5cd8e1825060a8470de5cf192a50bb5745"}))}};a.style=":host{display:block}";export{a as ui_link}
