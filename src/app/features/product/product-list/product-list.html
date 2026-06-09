@@ -1,0 +1,7 @@
+<section class="product-list-page container">
+    <div class="products-container">
+        @for (item of productList; track item.id; let idx = $index) {
+        <app-product-item (clicked)="goDetail()" [product]="item"></app-product-item>
+        }
+    </div>
+</section>

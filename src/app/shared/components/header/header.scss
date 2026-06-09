@@ -1,0 +1,52 @@
+:root {
+    --position-x: 0px;
+    --position-y: 16px;
+    --blur: 20px;
+    --spread: 0px;
+    --color-1: rgba(53, 65, 89, 0.04);
+}
+
+.banner-header {
+    background: linear-gradient(90deg, rgba(23, 161, 91, 1) 0%, rgba(26, 143, 241, 1) 100%);
+    width: 100%;
+    min-height: 32px;
+    padding: 6px 24px 6px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.site-header {
+    background-color: #fff;
+    box-shadow: var(--position-x) var(--position-y) var(--blur) var(--spread) var(--color-1);
+
+    .header-searchbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 24px;
+        padding-right: 24px;
+        min-height: 64px;
+
+        .searchbar__container {
+            width: 50%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 16px;
+
+            ui-searchbar {
+                width: 100%;
+            }
+        }
+
+        .cart__container {
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
+
+}

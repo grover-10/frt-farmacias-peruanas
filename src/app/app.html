@@ -1,0 +1,11 @@
+<app-header></app-header>
+<router-outlet />
+@if (modalService.modal(); as modal) {
+<ui-modal [open]="modal.open" [type]="modal.type" [titleModal]="modal.title" [message]="modal.message"
+    (closeModal)="modalService.close()">
+</ui-modal>
+}
+@if (splashService.loading()) {
+<app-splash-screen />
+}
+<app-footer></app-footer>

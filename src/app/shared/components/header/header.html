@@ -1,0 +1,17 @@
+<div class="banner-header">
+    <ui-text color="text-white">Es un hecho establecido hace demasiado tiempo que un lector.</ui-text>
+</div>
+<header class="site-header">
+    <section class="header-searchbar">
+        <div class="searchbar__container">
+            <img class="logo" src="assets/images/logo-inkafarma.png" alt="logo-inkafarma">
+            <ui-searchbar></ui-searchbar>
+        </div>
+        <div class="cart__container">
+            <ui-cart-button [count]="currentQuantity()"></ui-cart-button>
+        </div>
+    </section>
+    <section class="header-nav-bar">
+        <ui-nav-bar [items]="categories"></ui-nav-bar>
+    </section>
+</header>

@@ -1,0 +1,37 @@
+        <div class="product-card">
+            <div class="product-image-container" (click)="onClick()">
+                <img width="248" height="248" ngSrc="assets/images/huggies.png" alt="Toallitas Húmedas Huggies" class="product-image" />
+            </div>
+            <div class="product-content">
+                <ui-text> BOLSA 80 UN</ui-text>
+                <h3 class="product-title">
+                    {{product.name}}
+                </h3>
+                <div class="product-services">
+                    <ui-tag></ui-tag>
+                    <ui-tag></ui-tag>
+                </div>
+                <div class="product-prices">
+                    <div class="price">
+                        <ui-text>{{product.price}}</ui-text>
+                        <div class="tags"></div>
+                    </div>
+                    <div class="price">
+                        <ui-text>{{product.price}}</ui-text>
+                        <div class="tags">
+                             <ui-badge background-color="#354159"></ui-badge>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <ui-text>{{product.price}}</ui-text>
+                        <div class="tags">
+                            <ui-badge></ui-badge>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <ui-button label="Agregar al carrito" (click)="addToCart()"></ui-button>
+                    <ui-icon-button background-color="#EDF8F2" icon-color="#17A15B"></ui-icon-button>
+                </div>
+            </div>
+        </div>

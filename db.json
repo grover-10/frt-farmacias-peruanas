@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": "prod-101",
+            "name": "Paracetamol 500mg",
+            "price": 8.5,
+            "image": "assets/image/product-1.png"
+        },
+        {
+            "id": "prod-102",
+            "name": "Ibuprofeno 400mg",
+            "price": 12.9,
+            "image": "assets/image/product-1.png"
+        },
+        {
+            "id": "prod-103",
+            "name": "Ibuprofeno 400mg",
+            "price": 12.9,
+            "image": "assets/image/product-1.png"
+        },
+        {
+            "id": "prod-104",
+            "name": "Ibuprofeno 400mg",
+            "price": 12.9,
+            "image": "assets/image/product-1.png"
+        },
+        {
+            "id": "prod-105",
+            "name": "Ibuprofeno 400mg",
+            "price": 12.9,
+            "image": "assets/image/product-1.png"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Medicamentos"
+        }
+    ]
+}
