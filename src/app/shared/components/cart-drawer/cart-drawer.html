@@ -1,0 +1,46 @@
+<div class="cart-overlay" (click)="closeCart()"></div>
+
+
+<aside class="cart-drawer">
+    <header class="cart-header">
+        <ui-text size="text-subtitle" font-weight="font-bold">Mi carrito</ui-text>
+        <button class="close-btn" (click)="closeCart()">
+            X
+        </button>
+    </header>
+
+    <section class="cart-content">
+        <ui-text>Inkafarma ({{cartService.totalItemsCount()}})</ui-text>
+        @for (item of cartService.items(); track item.id; let idx = $index) {
+        <ui-item-cart image={{item.image}} name={{item.name}} presentation="SPRAY 300 ML" quantity={{item.quantity}}
+            price={{item.price}} old-price={{item.price}}>
+        </ui-item-cart>
+        }
+
+    </section>
+
+    <footer class="cart-footer">
+        <div class="summary">
+            <div>
+                <ui-text>
+                    Subtotal
+                </ui-text>
+                <ui-text font-weight="font-extrabold">S/ {{cartService.totalPrice()}}</ui-text>
+            </div>
+
+            <div>
+                <ui-text>
+                    Exclusivo con tarjeta
+                </ui-text>
+                <ui-text font-weight="font-extrabold">S/ {{cartService.totalPrice()}}</ui-text>
+            </div>
+        </div>
+
+        <div class="actions">
+            <ui-button type="secondary" text-color="text-brand-dark" label="Limpiar" (click)="clearCart()">
+            </ui-button>
+            <ui-button type="primary" label="Comprar ahora" (click)="showInfo()">
+            </ui-button>
+        </div>
+    </footer>
+</aside>

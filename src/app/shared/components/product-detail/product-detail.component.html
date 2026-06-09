@@ -1,0 +1,71 @@
+<article class="product-detail">
+    <ui-gallery>
+
+    </ui-gallery>
+    <section class="product-image">
+        <img [src]="product.image" alt="Pharamol Antigripal" width="520" height="520">
+    </section>
+    <section class="product-info">
+        <h1 itemprop="name">
+            {{product.name}}
+        </h1>
+
+        <section class="prices">
+            <div class="price-row">
+                <ui-text>Precio regular</ui-text>
+                <div class="price-group">
+                    <ui-text>{{product.price}}</ui-text>
+                </div>
+            </div>
+            <div class="price-row">
+                <ui-text>Precio promocional</ui-text>
+                <div class="price-group">
+                    <ui-text>{{product.price}}</ui-text>
+                    <ui-badge value="-5%" background-color="#354159"></ui-badge>
+                </div>
+            </div>
+            <div class="price-row">
+                <ui-text>Precio con tarjeta</ui-text>
+                <div class="price-group">
+                    <ui-text>{{product.price}}</ui-text>
+                    <ui-badge></ui-badge>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <ul class="description-list">
+                <li>
+                    <strong>¿Qué es PHARAMOL ANTIGRIPAL 500mg+5mg+2mg Tableta Recubierta y para qué se
+                        utiliza?</strong>
+                </li>
+                <li>
+                    <p [class.is-truncated]="!isExpanded()">
+                        {{ textDescription() }}
+                    </p>
+                </li>
+            </ul>
+
+            <button class="toggle-btn" (click)="toggleDescription()">
+                {{ isExpanded() ? 'Ver menos' : 'Ver más' }}
+            </button>
+        </section>
+
+        <section class="variants">
+            <div class="variant">
+                <h2>Presentacion:</h2>
+                <ui-text>Sobre</ui-text>
+            </div>
+
+            <ui-selector></ui-selector>
+        </section>
+        <section>
+            <div class="actions">
+                <ui-button label="Agregar al carrito" text-color="text-white" (click)="addToCart()"></ui-button>
+                <ui-icon-button background-color="#EDF8F2" icon-color="#17A15B"></ui-icon-button>
+            </div>
+        </section>
+
+    </section>
+
+</article>

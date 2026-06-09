@@ -14,6 +14,7 @@
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+
                 .product-image {
                     width: 248px;
                     height: 248px;
@@ -27,10 +28,15 @@
                 flex-direction: column;
                 gap: 16px;
 
-                .product-title {
-                    font-size: 14px;
-                    line-height: 1.4;
-                    color: #2f3b52;
+                .product-description {
+                    display: flex;
+                    gap: 4px;
+                    flex-direction: column;
+                    .product-title {
+                        font-size: 14px;
+                        line-height: 1.4;
+                        color: #2f3b52;
+                    }
                 }
 
                 .product-services {

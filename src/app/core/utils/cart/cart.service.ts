@@ -15,7 +15,7 @@ export class CartService {
   private platformId = inject(PLATFORM_ID);
   private readonly STORAGE_KEY = 'fp_shopping_cart';
   private cartState = signal<CartItem[]>([]);
-
+  readonly isOpen = signal(false);
   items = this.cartState.asReadonly();
 
   totalItemsCount = computed(() =>
@@ -73,5 +73,17 @@ export class CartService {
         }
       });
     }
+  }
+
+  open() {
+    this.isOpen.set(true);
+  }
+
+  close() {
+    this.isOpen.set(false);
+  }
+
+  toggle() {
+    this.isOpen.update(value => !value);
   }
 }

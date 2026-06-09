@@ -1,11 +1,12 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, inject, Input, Output } from '@angular/core';
 import { CartService } from '../../../core/utils/cart/cart.service';
 import { ModalService } from '../../../core/utils/modal/modal.service';
-import { NgOptimizedImage } from '@angular/common';
+import { CurrencyPipe, NgOptimizedImage } from '@angular/common';
 import { Product } from '../../../core/models/product.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-item',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, CurrencyPipe],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './product-item.html',
   styleUrl: './product-item.scss',
@@ -18,8 +19,8 @@ export class ProductItemComponent {
     name: '',
     price: 0
   };
-  @Output() clicked = new EventEmitter<void>;
   private cartService = inject(CartService);
+  private router = inject(Router);
   modal = inject(ModalService);
 
   addToCart() {
@@ -32,8 +33,12 @@ export class ProductItemComponent {
     this.showInfo()
   }
   onClick() {
-    this.clicked.emit();
-    this.trackAnalyticsEvent(this.product);
+    this.goDetail()
+
+  }
+
+  goDetail() {
+    this.router.navigate(['product/product-detail', this.product.id]);
   }
 
   showInfo() {

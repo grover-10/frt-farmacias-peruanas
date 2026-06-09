@@ -5,10 +5,12 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ModalService } from './core/utils/modal/modal.service';
 import { SplashService } from './core/utils/splash/splash.service';
 import { SplashScreen } from './shared/components/splash-screen/splash-screen';
+import { CartService } from './core/utils/cart/cart.service';
+import { CartDrawer } from './shared/components/cart-drawer/cart-drawer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, SplashScreen],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, SplashScreen, CartDrawer],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.html',
   styleUrl: './app.css'
@@ -18,7 +20,7 @@ export class App {
   private router = inject(Router);
   modalService = inject(ModalService);
   splashService = inject(SplashService);
-
+  cartService = inject(CartService);
   constructor() {
     this.router.events.subscribe(event => {
 

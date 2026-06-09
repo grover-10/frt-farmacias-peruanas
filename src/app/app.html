@@ -8,4 +8,8 @@
 @if (splashService.loading()) {
 <app-splash-screen />
 }
+
+@if (cartService.isOpen()) {
+    <app-cart-drawer></app-cart-drawer>
+}
 <app-footer></app-footer>

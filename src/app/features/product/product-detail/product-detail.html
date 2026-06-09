@@ -1,74 +1,10 @@
 <main class="product-detail-page container">
-    <article class="product-detail">
-        <ui-gallery>
 
-        </ui-gallery>
-        <section class="product-image">
-            <img ngSrc="assets/images/product-1.png" alt="Pharamol Antigripal" width="520" height="520">
-        </section>
-        <section class="product-info">
-            <h1 itemprop="name">
-                Pharamol Antigripal 500 mg + 5 mg + 2 mg
-            </h1>
+    @if (product(); as productDetail) {
+        <app-product-detail-component [product]="productDetail">
 
-            <section class="prices">
-                <div class="price-row">
-                    <ui-text>Precio regular</ui-text>
-                    <div class="price-group">
-                        <ui-text>17.80</ui-text>
-                    </div>
-                </div>
-                <div class="price-row">
-                    <ui-text>Precio promocional</ui-text>
-                    <div class="price-group">
-                        <ui-text>17.80</ui-text>
-                        <ui-badge value="-5%" background-color="#354159"></ui-badge>
-                    </div>
-                </div>
-                <div class="price-row">
-                    <ui-text>Precio con tarjeta</ui-text>
-                    <div class="price-group">
-                        <ui-text>17.80</ui-text>
-                        <ui-badge></ui-badge>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <ul class="description-list">
-                    <li>
-                        <strong>¿Qué es PHARAMOL ANTIGRIPAL 500mg+5mg+2mg Tableta Recubierta y para qué se
-                            utiliza?</strong>
-                    </li>
-                    <li>
-                        <p [class.is-truncated]="!isExpanded()">
-                            {{ textDescription() }}
-                        </p>
-                    </li>
-                </ul>
-
-                <button class="toggle-btn" (click)="toggleDescription()">
-                    {{ isExpanded() ? 'Ver menos' : 'Ver más' }}
-                </button>
-            </section>
-
-            <section class="variants">
-                <div class="variant">
-                    <h2>Presentacion:</h2>
-                    <ui-text>Sobre</ui-text>
-                </div>
-
-                <ui-selector></ui-selector>
-            </section>
-            <section>
-                <div class="actions">
-                    <ui-button label="Agregar al carrito" text-color="text-white"></ui-button>
-                    <ui-icon-button background-color="#EDF8F2" icon-color="#17A15B"></ui-icon-button>
-                </div>
-            </section>
-        </section>
-
-    </article>
+        </app-product-detail-component>
+    }
 
     <section>
         <ui-accordion></ui-accordion>
@@ -89,13 +25,9 @@
             </div>
         </div>
         <div #carousel class="carousel">
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
-            <app-product-item></app-product-item>
+            @for (item of productList; track item.id; let idx = $index) {
+            <app-product-item [product]="item"></app-product-item>
+            }
         </div>
     </section>
 </main>

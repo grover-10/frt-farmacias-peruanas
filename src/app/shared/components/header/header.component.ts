@@ -11,6 +11,7 @@ import { CartService } from '../../../core/utils/cart/cart.service';
 export class HeaderComponent {
 
   private cartService = inject(CartService);
+
   categories = [
     { titleItem: 'Dermocosmética', route: '/dermocosmetica' },
     { titleItem: 'Farmacia', route: '/farmacia' },
@@ -27,4 +28,8 @@ export class HeaderComponent {
     console.log('quantity', cartItems)
     return cartItems.length;
   });
+
+  openCart(){
+    this.cartService.open();
+  }
 }

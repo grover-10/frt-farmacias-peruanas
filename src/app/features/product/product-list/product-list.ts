@@ -13,17 +13,12 @@ import { Product } from '../../../core/models/product.model';
 })
 export class ProductList implements OnInit {
   ngOnInit(): void {
-    this.getProducts()
+    this.getProducts();
   }
 
-  private router = inject(Router);
-  private productService = inject(ProductService)
+  private productService = inject(ProductService);
   productList: Product[] = [];
 
-
-  goDetail() {
-    this.router.navigate(['product/product-detail']);
-  }
   getProducts() {
     this.productService.getProducts().subscribe(response => {
       this.productList = response;
